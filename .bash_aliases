@@ -1,0 +1,1 @@
+/home/ajsharp/.bash_aliases
