@@ -3,6 +3,7 @@ alias ss='script/server'
 alias sc='script/console'
 alias scs='script/console --sandbox'
 alias sg='script/generate'
+alias spi='script/plugin install'
 alias rdbm='rake db:migrate'
 alias rdtp='rake db:test:prepare'
 
