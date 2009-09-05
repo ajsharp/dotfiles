@@ -1,1 +1,0 @@
-/home/ajsharp/Projects/github_repos/config_files/gvimrc
