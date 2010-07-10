@@ -14,8 +14,8 @@ set noswapfile
 set nowrap
 
 " integrate vim with autotest and map \fd to jump to line of error
-compiler rubyunit
-nmap <Leader>fd :cf /tmp/autotest.txt<cr> :compiler rubyunit<cr>
+" compiler rubyunit
+" nmap <Leader>fd :cf /tmp/autotest.txt<cr> :compiler rubyunit<cr>
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -68,13 +68,13 @@ else
 
 endif " has("autocmd")
 
- if has("folding")
-   set foldenable
-   set foldmethod=syntax
-   set foldlevel=1
-   set foldnestmax=2
-   set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
- endif
+ " if has("folding")
+ "   set foldenable
+ "   set foldmethod=syntax
+ "   set foldlevel=1
+ "   set foldnestmax=2
+ "   set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
+ " endif
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -131,6 +131,7 @@ vmap D y'>p
 
 " For Haml
 au! BufRead,BufNewFile *.haml         setfiletype haml
+au! BufRead,BufNewFile *.ru         setfiletype ruby
 
 " No Help, please
 nmap <F1> <Esc>
@@ -143,16 +144,16 @@ imap <C-F> <C-R>=expand("%")<CR>
 vmap P p :call setreg('"', getreg('0')) <CR>
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·
+" set list listchars=tab:»·,trail:·
 
 " Edit routes
 command! Rroutes :e config/routes.rb
 command! RTroutes :tabe config/routes.rb
 
 " Local config
-if filereadable(".vimrc.local")
-  source .vimrc.local
-endif
+" if filereadable(".vimrc.local")
+"   source .vimrc.local
+" endif
 
 " Use Ack instead of Grep when available
 if executable("ack")
@@ -160,7 +161,7 @@ if executable("ack")
 endif
 
 " Color scheme
-colorscheme vividchalk
+" colorscheme vibrantink
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -184,5 +185,10 @@ set smartcase
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
-imap ;; <Esc>
+" My shortcut keys
+map <C-l> <C-W>l
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+
 imap <C-l>  => 
