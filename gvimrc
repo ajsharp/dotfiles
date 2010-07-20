@@ -1,8 +1,14 @@
 " Font
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 13
+set guioptions-=TlLrR
+set guioptions=h
+" set guifont=Monaco:h12
+set guifont=Inconsolata:h14
+
 
 " Pretty theme
-colorscheme vividchalk
+" colorscheme vividchalk
+" colorscheme osx_like
+colorscheme twilight
 
 " Show line numbers
 set number
