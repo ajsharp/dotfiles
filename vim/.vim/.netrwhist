@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/ajsharp/Sites/optimis/spec'
-let g:netrw_dirhist_2='/Users/ajsharp/Sites/barcamp/features/step_definitions'
-let g:netrw_dirhist_3='/Users/ajsharp/Sites/frothblogic/vendor/plugins/authlogic-engine/app/views/user_sessions'
-let g:netrw_dirhist_4='/Users/ajsharp/Sites/optimisgit/vendor/plugins/subdomain-fu/lib/autotest'
-let g:netrw_dirhist_5='/Users/ajsharp/Sites/optimisgit/vendor/plugins'
