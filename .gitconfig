@@ -1,0 +1,32 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[user]
+	name = Alex Sharp
+	email = ajsharp@gmail.com
+[github]
+	user = ajsharp
+[apply]
+	whitespace = nowarn
+[core]
+  # editor = mvim --nofork
+  # editor = emacs
+  editor = mate -w
+[alias]
+  ci = commit
+  co = checkout
+  cp = cherry-pick
+  br = branch
+  st = status
+  mt = mergetool
+  track = git checkout -b $1 origin/$1
+  ss = stash show -p
+  hist = log --graph
+[merge]
+  tool = vimdiff
+[heroku]
+	account = personal
+[include]
+  path = ~/.gitconfig_secrets
