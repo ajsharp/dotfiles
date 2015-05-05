@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
-files = %w(.bash_profile .bash_aliases .vimrc .bashrc .gitconfig .git-completion.sh .rspec .tmux.conf)
+files = %w(.bash_profile .bash_aliases .vimrc .bashrc .gitconfig .git-completion.sh .rspec .tmux.conf .gemrc)
 files.each { |file| `cp #{file} ~/`}
