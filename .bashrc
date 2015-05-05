@@ -15,7 +15,6 @@ export PS1='\[$(tput bold)\]\[$(tput setaf 4)\]\u:\w\[$(tput setaf 2)\] $(rvm_ve
 
 
 source ~/.git-completion.sh
-source ~/.git-flow-completion.bash
 
 # export EDITOR='mate -w'
 export EDITOR='subl'
