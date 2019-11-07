@@ -4,7 +4,7 @@ paths = [
   '~/.bash_aliases',
   '~/.bashrc',
   '~/.bash_profile',
-  '~/.git-completion.sh',
+  '~/.git-completion.bash',
   '~/.gitconfig',
   '~/.gitignore',
   '~/.tmux.conf',

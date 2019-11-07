@@ -7,7 +7,7 @@ paths = [
   '.bash_aliases',
   '.bashrc',
   '.bash_profile',
-  '.git-completion.sh',
+  '.git-completion.bash',
   '.gitconfig',
   '.gitignore',
   '.tmux.conf',
@@ -20,9 +20,9 @@ paths.each do |path|
   if File.exists?(dest_path)
     backup_path = File.expand_path("#{dest_path}.bk")
     puts "Existing #{path} file found. Creating backup at #{backup_path}"
-    # FileUtils.cp(dest_path, backup_path)
+    FileUtils.cp(dest_path, backup_path)
   end
 
   puts "Copying #{src_path} -> #{dest_path}"
-  # FileUtils.cp(src_path, dest_path)
+  FileUtils.cp(src_path, dest_path)
 end
