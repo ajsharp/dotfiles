@@ -3,6 +3,7 @@
 	status = auto
 	branch = auto
 	interactive = auto
+	status = always
 [user]
 	name = Alex Sharp
 	email = ajsharp@gmail.com
@@ -13,7 +14,9 @@
 [core]
   # editor = mvim --nofork
   # editor = emacs
-  editor = mate -w
+  # editor = atom
+	editor = code --wait
+	excludesfile = /Users/ajsharp/.gitignore_global
 [alias]
   ci = commit
   co = checkout
@@ -30,3 +33,11 @@
 	account = personal
 [include]
   path = ~/.gitconfig_secrets
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = osxkeychain

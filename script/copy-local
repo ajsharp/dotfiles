@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+paths = [
+  '~/.bash_aliases',
+  '~/.bashrc',
+  '~/.bash_profile',
+  '~/.git-completion.sh',
+  '~/.gitconfig',
+  '~/.gitignore',
+  '~/.tmux.conf',
+  '~/.rspec'
+]
+
+paths.each do |path|
+  `cp #{path} .`
+end
