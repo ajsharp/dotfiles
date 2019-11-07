@@ -2,9 +2,15 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
-function rvm_version {
-  ~/.rvm/bin/rvm-prompt i v
-}
+# ========= ENV VARS 
+export EDITOR='code'
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export CLICOLOR=1
+export TERM=xterm-256color
+export LESS=-R
+export MONGO_CONFIG_FILE=/usr/local/etc/mongod.conf
 
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
