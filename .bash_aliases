@@ -32,6 +32,7 @@ alias sr='script/rails'
 alias docs23='open ~/projects/rails/rails2.3docs/index.html'
 alias migration='./bin/rails g migration'
 alias console='./bin/rails c'
+alias cons='./bin/rails c'
 alias server='./bin/rails s'
 alias migrate='./bin/rake db:migrate'
 
@@ -53,7 +54,6 @@ alias resapache='sudo launchctl unload /System/Library/LaunchDaemons/org.apache.
 alias start_apache='sudo /usr/sbin/apachectl -k start'
 
 # other aliases
-alias tf='tail -f'
 alias passtart='touch tmp/restart.txt'
 alias gemdir='cd /Library/Ruby/Gems/1.8/gems/'
 alias cycle_mysql='sudo launchctl stop "com.mysql.mysqld"'
@@ -73,6 +73,7 @@ alias g='git'
 alias br='bundle exec rspec'
 alias f='foreman'
 alias srs='spring rspec'
+alias gworker='./bin/rails g sidekiq:worker'
 
 
 # yarn
@@ -80,3 +81,10 @@ alias ya='yarn add'
 alias yr='yarn remove'
 alias y='yarn'
 alias yi='yarn install'
+
+# terraform
+alias tfv='terraform validate'
+alias tfi='terraform init'
+alias tfp='terraform plan'
+alias tf='terraform'
+alias tfh='terraform -help'
