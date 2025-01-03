@@ -11,7 +11,8 @@ paths = [
   '.gitconfig',
   '.gitignore',
   '.tmux.conf',
-  '.rspec'
+  '.rspec',
+  '.zshrc',
 ]
 
 paths.each do |path|

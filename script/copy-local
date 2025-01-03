@@ -8,9 +8,13 @@ paths = [
   '~/.gitconfig',
   '~/.gitignore',
   '~/.tmux.conf',
-  '~/.rspec'
+  '~/.rspec',
+  '~/.zshrc',
 ]
 
 paths.each do |path|
-  `cp #{path} .`
+  if File.exist?(File.expand_path(path))
+    puts "Copying #{path} to ."
+    `cp #{path} .`
+  end
 end
