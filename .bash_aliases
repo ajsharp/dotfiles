@@ -1,4 +1,5 @@
-alias push_production_update='git push origin master && cap production deploy:update'
+alias edit-shell='code ~/.zshrc'
+alias b='bundle'
 
 # git aliases
 alias gst='git status'
@@ -19,6 +20,11 @@ alias gci='git commit -m'
 alias gsl='git stash list'
 alias gssp='git stash show -p'
 alias gsp='git stash pop'
+alias gfr='git fetch origin && git rebase'
+alias gf='git fetch'
+alias gbd='git branch -d'
+alias compare='git log --oneline HEAD...mainline'
+alias createpr='gh pr create --fill'
 
 # rails aliases
 alias rdbm='./bin/rake db:migrate'
@@ -35,6 +41,7 @@ alias console='./bin/rails c'
 alias cons='./bin/rails c'
 alias server='./bin/rails s'
 alias migrate='./bin/rake db:migrate'
+alias rce='EDITOR="code --wait" bin/rails credentials:edit'
 
 # gem aliases
 alias gsr='gem search -r'
@@ -48,11 +55,6 @@ alias rgm='rvm gemset'
 alias cpdu='cap production deploy:update'
 alias csdu='cap staging deploy:update'
 
-# apache aliases
-# alias restart_apache='sudo /usr/sbin/apachectl -k restart'
-alias resapache='sudo launchctl unload /System/Library/LaunchDaemons/org.apache.httpd.plist && sudo launchctl load /System/Library/LaunchDaemons/org.apache.httpd.plist'
-alias start_apache='sudo /usr/sbin/apachectl -k start'
-
 # other aliases
 alias passtart='touch tmp/restart.txt'
 alias gemdir='cd /Library/Ruby/Gems/1.8/gems/'
@@ -61,11 +63,12 @@ alias grp='grep -rn --color'
 
 alias hs='hack && ship'
 
+alias ls='la -lah'
 alias lsl='ls -l'
 alias lsla='ls -la'
 alias lslag='ls -la | grep'
 alias be='bundle exec'
-alias ps?='ps aux | grep'
+# alias ps?='ps aux | grep'
 alias launcher='launchctl'
 # alias emacs='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no
 alias h='heroku'
@@ -88,3 +91,17 @@ alias tfi='terraform init'
 alias tfp='terraform plan'
 alias tf='terraform'
 alias tfh='terraform -help'
+
+# kubectl
+alias ktl='kubectl'
+alias kgp='kubectl get pods'
+alias kgd='kubectl get deployments'
+
+
+# random
+
+# fly aliases
+alias fsc='fly ssh console'
+alias dk='docker'
+alias dc='docker compose'
+alias de='docker exec'
