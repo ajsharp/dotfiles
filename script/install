@@ -27,3 +27,16 @@ paths.each do |path|
   puts "Copying #{src_path} -> #{dest_path}"
   FileUtils.cp(src_path, dest_path)
 end
+
+# install git hooks
+
+git_hooks_path = File.expand_path("./git-hooks")
+git_hooks_dest_path = File.expand_path("~/.git-hooks")
+if File.exists?(git_hooks_dest_path)
+  backup_path = File.expand_path("#{git_hooks_dest_path}.bk")
+  puts "Existing git-hooks directory found. Creating backup at #{backup_path}"
+  FileUtils.cp_r(git_hooks_dest_path, backup_path)
+else
+  FileUtils.mkdir_p(git_hooks_dest_path)
+  FileUtils.cp_r(git_hooks_path, git_hooks_dest_path)
+end
